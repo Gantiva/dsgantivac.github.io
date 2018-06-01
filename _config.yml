@@ -1,5 +1,12 @@
 theme: jekyll-theme-cayman
 
+---
+title: This is my title
+layout: post
+
+
+Here is my page.
+
 
 toc:
   - title: Group 1
@@ -26,3 +33,6 @@ toc:
         url: /widget2.html
       - page: Widget 3
         url: /widget3.html
+
+
+---
