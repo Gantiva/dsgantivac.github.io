@@ -13,7 +13,10 @@
 <body>
   
   <div class="header">
-    <div class="box"> 
+    <div class="box" id="elem" > 
+      <p id = "count">
+        pageYOffset: 0
+      </p>
       <h1 style="margin-top: 45px" >david santiago Gantiva castro</h1> 
     </div>
     
@@ -34,6 +37,21 @@
     
   </div>
 
+  <script>
+    function myFunction() {
+      var element = document.getElementById("elem");
+      var desiredPosition = 130;
+      var counter = document.getElementById("count");
+      counter.innerHTML = 'pageyOffset: ' + window.pageYOffset;
+        if (window.pageYOffset > desiredPosition) {
+          element.style.cssText += "position: fixed;margin-top:0";
+        } else {
+          element.style.cssText += "margin: 100px 0px 0px 20%;";
+        }
+    }
+    window.onscroll = myFunction;
+  
+  </script>
 
   
 </body>
