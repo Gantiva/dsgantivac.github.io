@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Drink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" media="screen" href="drink.css"/>
 </head>
 <body>
-    <h1>El asombroso juego de bebidas de Gantiva inspirado por Karen</h1>
-    <h1 id ="color"></h1>
-    <h1 id ="shots"></h1>
-    <h1 id ="shots2"></h1>
-
-    <select id="num_players" class="select_players" title="numero de jugadores" onchange="Players()" >
-        <option value="0" selected="selected">numero de jugadores</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-    </select>
+    <h1 class="game_name">🍺🍺🍺  El asombroso juego de bebidas de Gantiva inspirado por Karen  🍺🍺🍺</h1>
+    <!--
+    -->
+        <h1 id ="color"></h1>
+        <h1 id ="shots"></h1>
+        <h1 id ="shots2"></h1>
+    <div style="text-align: center">    
+        <select id="num_players" class="select_players" title="numero de jugadores" onchange="Players()" >
+            <option value="0" selected="selected">numero de jugadores</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+    </div>
 
     <div class="clear"></div>
 
@@ -33,7 +37,7 @@
     <div class="clear"></div>
 
     <div class="btn">
-        <button onclick="getShots()" >Random</button>
+        <button onclick="Change()" >Random</button>
     </div>
     
 </body>
@@ -71,7 +75,7 @@
             data += '<div class="circle ">'+'<p class="drink"> <br/> Jugador '+(i+1).toString()+'<br/><p style="color: white" class="player_shot" ></p> </p>'+'</div>';
         }
         document.getElementById("container_2").innerHTML = data;
-        var x = setInterval(Change,1500)
+        //var x = setInterval(Change,1500)
     }
 
     function shuffle(arr) {
@@ -89,12 +93,12 @@
 
     function getShots(){
         var shots2 = shuffle(shots)
-        document.getElementById("shots").innerHTML =  "Normal: "
-        document.getElementById("shots2").innerHTML = "Shuffle: "
+        //document.getElementById("shots").innerHTML =  "Normal: "
+        //document.getElementById("shots2").innerHTML = "Shuffle: "
 
         for(var i = 0 ; i<shots.length;i++ ){
-            document.getElementById("shots").innerHTML += shots[i] + " "
-            document.getElementById("shots2").innerHTML += shots2[i]+ " "
+            //document.getElementById("shots").innerHTML += shots[i] + " "
+            //document.getElementById("shots2").innerHTML += shots2[i]+ " "
         }
     }
     
