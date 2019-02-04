@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>El asombroso juego de bebidas de Gantiva inspirado por karen</h1>
+    <h1 id ="color"></h1>
     <div class="container">
 
         <div class="circle ">
@@ -25,25 +26,35 @@
         <div class="clear"></div>
 
     <div class="btn">
-        <button onclick="Change()" >Random</button>
+        <button onclick="interval()" >Random</button>
     </div>
     
 </body>
 <script>
 
-    var colors = ['red','black','white','orange','green'];
+    
+    
     var index = 0;
+    var colors = ['red','black','blue','orange','green'];
+    
+    function interval(){
+        var x = setInterval(Change,1000)
+    }
+    
     function Change(){
         //document.getElementsByClassName("drink").style = "background-color: "+colors[i]+";"
         var circles = document.getElementsByClassName("circle");
+        console.log(index)
         for (var i = 0; i<circles.length; i++) {
             circles[i].style = "background-color: "+colors[index]+";"
         }
-        
+        document.getElementById("color").innerHTML = "color = "+colors[index];
         index +=1;
-        if(index > colors.length){
+        if(index > colors.length-1){
             index = 0;
         }
     }
+    
+
 </script>
 </html>
