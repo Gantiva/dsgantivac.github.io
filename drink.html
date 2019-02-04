@@ -9,7 +9,6 @@
 </head>
 <body>
     <h1>El asombroso juego de bebidas de Gantiva inspirado por Karen</h1>
-    <h1>Daniela te amo, Karen ayudeme con Daniela, No le vaya a decir a Daniela</h1>
     <h1 id ="color"></h1>
     <h1 id ="shots"></h1>
     <h1 id ="shots2"></h1>
@@ -69,7 +68,7 @@
         var shots2 = shuffle(shots)
         
         for(var i= 0; i < players;i++){
-            data += '<div class="circle ">'+'<p class="drink">Daniela te amo <br/> Jugador '+(i+1).toString()+'<br/><p style="color: white" class="player_shot" ></p> </p>'+'</div>';
+            data += '<div class="circle ">'+'<p class="drink"> <br/> Jugador '+(i+1).toString()+'<br/><p style="color: white" class="player_shot" ></p> </p>'+'</div>';
         }
         document.getElementById("container_2").innerHTML = data;
         var x = setInterval(Change,1500)
