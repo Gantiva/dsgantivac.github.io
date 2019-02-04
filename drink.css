@@ -35,7 +35,7 @@ h1 {
     text-align: center
 }
 
-button{
+.btn-1{
     margin-top: 25px;
     border-radius: 25px;
     width: 100px;
@@ -47,7 +47,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.btn-1:hover{
     background-color: rgb(0, 128, 0,0.8)
 }
 
