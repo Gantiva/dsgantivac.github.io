@@ -8,50 +8,94 @@
     <link rel="stylesheet" type="text/css" media="screen" href="drink.css"/>
 </head>
 <body>
-    <h1>El asombroso juego de bebidas de Gantiva inspirado por karen</h1>
+    <h1>El asombroso juego de bebidas de Gantiva inspirado por Karen</h1>
+    <h1>Daniela te amo, Karen ayudeme con Daniela, No le vaya a decir a Daniela</h1>
     <h1 id ="color"></h1>
-    <div class="container">
+    <h1 id ="shots"></h1>
+    <h1 id ="shots2"></h1>
 
-        <div class="circle ">
-            <p class="drink">Daniela te amo</p>
-        </div>
-        <div class="circle ">
-            <p class="drink">Karen ayudeme con Daniela</p>
-        </div>
-        <div class="circle ">
-            <p class="drink">No le vaya a decir a Daniela</p>
-        </div>
+    <select id="num_players" class="select_players" title="numero de jugadores" onchange="Players()" >
+        <option value="0" selected="selected">numero de jugadores</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+    </select>
+
+    <div class="clear"></div>
+
+    <div id="container_2" class="container_2">
         
     </div>
-        <div class="clear"></div>
+
+    <div class="clear"></div>
 
     <div class="btn">
-        <button onclick="interval()" >Random</button>
+        <button onclick="getShots()" >Random</button>
     </div>
     
 </body>
 <script>
 
-    
-    
     var index = 0;
     var colors = ['red','black','blue','orange','green'];
-    
-    function interval(){
-        var x = setInterval(Change,1000)
-    }
+    var shots  = ['gaseosa','guaro','perico','poper','tusi','sexo','ron'];
     
     function Change(){
-        //document.getElementsByClassName("drink").style = "background-color: "+colors[i]+";"
+
+        getShots()
+
         var circles = document.getElementsByClassName("circle");
+        var players_shot = document.getElementsByClassName("player_shot");
+        var shots2 = shuffle(shots)
         console.log(index)
         for (var i = 0; i<circles.length; i++) {
             circles[i].style = "background-color: "+colors[index]+";"
+            players_shot[i].innerHTML = shots2[i]
         }
-        document.getElementById("color").innerHTML = "color = "+colors[index];
+        
         index +=1;
         if(index > colors.length-1){
             index = 0;
+        }
+    }
+
+    function Players(){
+        var players= document.getElementById("num_players").value;
+        var data = ""
+        var shots2 = shuffle(shots)
+        
+        for(var i= 0; i < players;i++){
+            data += '<div class="circle ">'+'<p class="drink">Daniela te amo <br/> Jugador '+(i+1).toString()+'<br/><p style="color: white" class="player_shot" ></p> </p>'+'</div>';
+        }
+        document.getElementById("container_2").innerHTML = data;
+        var x = setInterval(Change,1500)
+    }
+
+    function shuffle(arr) {
+        var a = arr.slice();
+
+        var j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+
+    function getShots(){
+        var shots2 = shuffle(shots)
+        document.getElementById("shots").innerHTML =  "Normal: "
+        document.getElementById("shots2").innerHTML = "Shuffle: "
+
+        for(var i = 0 ; i<shots.length;i++ ){
+            document.getElementById("shots").innerHTML += shots[i] + " "
+            document.getElementById("shots2").innerHTML += shots2[i]+ " "
         }
     }
     

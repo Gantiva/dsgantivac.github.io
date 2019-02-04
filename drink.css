@@ -19,6 +19,7 @@ h1 {
 }
 
 .btn{
+    margin-top: 25px;
     text-align: center
 }
 
@@ -30,4 +31,8 @@ h1 {
     text-align: center;
     margin-right: 20px;
     float: left;
+}
+
+.select_players{
+    margin-bottom: 50px;
 }
