@@ -23,8 +23,7 @@ h1 {
 }
 
 .drink{
-    padding-top: 80px;
-    color: white
+    color: white;
 }
 
 
@@ -45,6 +44,9 @@ h1 {
     text-align: center;
     margin-right: 20px;
     float: left;
+    font-size: 25px;
+    font-weight: bold;
+    
 }
 
 .select_players{
