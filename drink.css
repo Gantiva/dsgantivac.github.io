@@ -3,3 +3,31 @@
 h1 {
     text-align: center
 }
+.container{
+    display: inline;
+    text-align: center
+}
+
+.drink{
+    padding-top: 80px;
+    color: white
+}
+
+
+.clear{
+    clear: both;
+}
+
+.btn{
+    text-align: center
+}
+
+.circle{
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    border-radius: 1000px;
+    text-align: center;
+    margin-right: 20px;
+    float: left;
+}

@@ -5,11 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Drink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="drink.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="drink.css"/>
 </head>
 <body>
     <h1>El asombroso juego de bebidas de Gantiva inspirado por karen</h1>
+    <div class="container">
+
+        <div class="circle ">
+            <p class="drink">Daniela te amo</p>
+        </div>
+        <div class="circle ">
+            <p class="drink">Karen ayudeme con Daniela</p>
+        </div>
+        <div class="circle ">
+            <p class="drink">No le vaya a decir a Daniela</p>
+        </div>
+        
+    </div>
+        <div class="clear"></div>
+
+    <div class="btn">
+        <button onclick="Change()" >Random</button>
+    </div>
     
 </body>
+<script>
+
+    var colors = ['red','black','white','orange','green'];
+    var index = 0;
+    function Change(){
+        //document.getElementsByClassName("drink").style = "background-color: "+colors[i]+";"
+        var circles = document.getElementsByClassName("circle");
+        for (var i = 0; i<circles.length; i++) {
+            circles[i].style = "background-color: "+colors[index]+";"
+        }
+        
+        index +=1;
+        if(index > colors.length){
+            index = 0;
+        }
+    }
+</script>
 </html>
