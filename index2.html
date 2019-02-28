@@ -1,75 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>David Gantiva</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style2.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>David Gantiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
 </head>
 <body>
-
-    <div class="conatiner">
-        <div class="row1">
-            <div class="name">
-                
-                <a href="#about"> <div class="links">About</div>               </a>
-                <a href="#aptitudes"> <div class="links">Aptitudes</div>           </a>
-                <a href="#formacion"> <div class="links">Formacion</div>           </a>
-                <a href=""> <div class="links">Logros</div>              </a>
-                <a href=""> <div class="links">Proyectos destacados</div></a>
-                
-            </div>
-        </div>
-        <div class="row2">
-            <div class="info" id="about" >
-                <div class="box">
-                        <img src="perfil.jpg" alt="David Gantiva"> <br/>
-                        David Santiago Gantiva Castro
-                        <p class="description">
-                            Estudiante de octavo de semestre de la ingeniería de sistemas y computación de la Universidad Nacional de Colombia, con gusto por los retos que se puedan llegar a presentar, para aprender y crecer profesionalmente.
-                        </p>
-                </div>
-            </div>
-
-            <div class="info" id="aptitudes">
-                <div class="box">
-                    <img src="perfil.jpg" alt="David Gantiva"> <br/>
-                    David Santiago Gantiva Castro
-                    <p class="description">
-                        lo mamo re sabrosongo
-                    </p>
-                </div>
-            </div>
-            
-                <div class="info" id="formacion">
-                    <div class="box">
-                        <img src="perfil.jpg" alt="David Gantiva"> <br/>
-                        David Santiago Gantiva Castro
-                        <p class="description">
-                            lo mamo re sabrosongo
-                        </p>
-                    </div>
-                </div>
-                    
-        </div>
-
+  
+  <div class="header">
+    <div class="box" id="elem" > 
+      <p id = "count">
+        pageYOffset: 0
+      </p>
+      <h1 style="margin-top: 45px" >david santiago Gantiva castro</h1> 
     </div>
     
+  </div>
+
+
+  <div class="container">
+    <div class="column_1 column">
+      <br/><br/>
+      <ul>
+        <li>Informacion</li>
+        <li>Biografia</li>
+        <li>Exnovias</li>
+      </ul>
+    </div>
+  
+    <div class="column_2 column ">
+    </div>
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $("a[href^='#']").click(function(e) {
-            e.preventDefault();
-            
-            var position = $($(this).attr("href")).offset().top;
+  </div>
 
-            $("body, html").animate({
-                scrollTop: position
-            } /* speed */ );
-        });
-    </script>
+  <script>
+    function myFunction() {
+      var element = document.getElementById("elem");
+      var desiredPosition = 60;
+      var counter = document.getElementById("count");
+      counter.innerHTML = 'pageyOffset: ' + window.pageYOffset;
+        if (window.pageYOffset > desiredPosition) {
+          element.style.cssText += "position: fixed;margin-top:0";
+        } else {
+          element.style.cssText += "margin: 100px 0px 0px 20%;";
+        }
+    }
+    window.onscroll = myFunction;
+  
+  </script>
 
+  
 </body>
 </html>
