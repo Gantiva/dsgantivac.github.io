@@ -5,10 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>David Gantiva</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
 
-    <head>Soy una perra</head>
+    <div class="conatiner">
+        <div class="row1">
+            <div class="name">
+                
+                <a href="#about"> <div class="links">About</div>               </a>
+                <a href="#aptitudes"> <div class="links">Aptitudes</div>           </a>
+                <a href="#formacion"> <div class="links">Formacion</div>           </a>
+                <a href=""> <div class="links">Logros</div>              </a>
+                <a href=""> <div class="links">Proyectos destacados</div></a>
+                
+            </div>
+        </div>
+        <div class="row2">
+            <div class="info" id="about" >
+                <div class="box">
+                        <img src="perfil.jpg" alt="David Gantiva"> <br/>
+                        David Santiago Gantiva Castro
+                        <p class="description">
+                            Estudiante de octavo de semestre de la ingeniería de sistemas y computación de la Universidad Nacional de Colombia, con gusto por los retos que se puedan llegar a presentar, para aprender y crecer profesionalmente.
+                        </p>
+                </div>
+            </div>
+
+            <div class="info" id="aptitudes">
+                <div class="box">
+                    <img src="perfil.jpg" alt="David Gantiva"> <br/>
+                    David Santiago Gantiva Castro
+                    <p class="description">
+                        lo mamo re sabrosongo
+                    </p>
+                </div>
+            </div>
+            
+                <div class="info" id="formacion">
+                    <div class="box">
+                        <img src="perfil.jpg" alt="David Gantiva"> <br/>
+                        David Santiago Gantiva Castro
+                        <p class="description">
+                            lo mamo re sabrosongo
+                        </p>
+                    </div>
+                </div>
+                    
+        </div>
+
+    </div>
     
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $("a[href^='#']").click(function(e) {
+            e.preventDefault();
+            
+            var position = $($(this).attr("href")).offset().top;
+
+            $("body, html").animate({
+                scrollTop: position
+            } /* speed */ );
+        });
+    </script>
+
 </body>
 </html>
