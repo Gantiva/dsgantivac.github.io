@@ -25,6 +25,11 @@ html,body{
     background-color: black;
 }
 
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .links{
     margin-bottom: 10px;
@@ -34,20 +39,15 @@ html,body{
     background-color: black;
     transition: 2s;
     border-radius: 10px;
-    border: 2px solid #08214D;
+    border: 2px solid #173364;
+    cursor: pointer;
 }
 
 .links:hover{
-    background-color: #08214D;
+    background-color: #173364;
     transition: 2s;
 }
 
-.menu{
-    
-    text-decoration: none;
-    color: white;
-    transition: all 0.2s linear;
-}
 
 .reference{
     text-decoration: none;
